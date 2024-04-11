@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonik - The Best React e-Commerce Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/src/output.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="top-nav bg-darkblue">
+        <div
+          class="container mx-auto flex justify-between py-2 px-4 items-center"
+        >
+          <div class="top-nav__left left-side hidden lg:flex gap-4">
+            <div class="left-side__phone">
+              <i class="fa-thin fa-phone phone-icon mr-2"></i>
+              <span class="left-side__number">+88012 3456 7894</span>
+            </div>
+            <div class="left-side__addreess">
+              <i class="fa-regular fa-envelope mail-icon mr-2"></i>
+              <a href="" class="left-side__email">support@ui-lib.com</a>
+            </div>
+          </div>
+          <a href="#" class="logo lg:hidden"
+            ><img src="./assets/img/logo.svg" alt="" class="logo-img w-20"
+          /></a>
+          <div class="top-nav__right right-side flex gap-4">
+            <div class="right-side__question">
+              <a href="#" class="right-side__link hidden no-underline lg:block"
+                >Theme FAQ"s</a
+              >
+            </div>
+            <div class="right-side__question">
+              <a href="#" class="right-side__link hidden no-underline lg:block"
+                >Need Help?</a
+              >
+            </div>
+            <div class="right-side__country">
+              <img
+                src="./assets/img/usa.png"
+                alt=""
+                class="lang-img inline-block"
+              />
+              <span>EN</span>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <div class="dropdown-menu bg-white hidden">
+                <ul class="dropdown-menu__list p-2">
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/usa.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>EN</span>
+                  </li>
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/bd.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>BN</span>
+                  </li>
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/in.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>HN</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="right-side__country">
+              <img
+                src="./assets/img/usa.png"
+                alt=""
+                class="lang-img inline-block"
+              />
+              <span>USD</span>
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <div class="dropdown-menu bg-white hidden">
+                <ul class="dropdown-menu__list p-2">
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/usa.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>USD</span>
+                  </li>
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/bd.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>BDT</span>
+                  </li>
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/in.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>INR</span>
+                  </li>
+                  <li class="dropdown-menu__item list-none my-3 text-textblack">
+                    <img
+                      src="./assets/img/uk.png"
+                      alt=""
+                      class="select-lang inline-block mr-3 font-semibold"
+                    />
+                    <span>EURO</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle-nav bg-white">
+        <div
+          class="container mx-auto flex justify-between py-3 px-4 items-center"
+        >
+          <a href="#" class="logo"
+            ><img src="./assets/img/logo.svg" alt="" class="logo-img"
+          /></a>
+          <div class="search-area flex">
+            <form action="" class="search-form">
+              <input
+                type="text"
+                class="search-input border-inputbordercolor"
+                placeholder="Search and hit enter..."
+              />
+              <button type="button" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div class="choosen-category hidden lg:block" bis_skin_checked="1">
+              All Categories
+              <i class="fa-solid fa-chevron-down category-icon"></i>
+              <div class="nav-categories hidden" bis_skin_checked="1">
+                <ul class="nav-categories__list">
+                  <li class="nav-categories__item px-3 py-1">All Categories</li>
+                  <li class="nav-categories__item px-3 py-1">Car</li>
+                  <li class="nav-categories__item px-3 py-1">Clothes</li>
+                  <li class="nav-categories__item px-3 py-1">Electronics</li>
+                  <li class="nav-categories__item px-3 py-1">Laptop</li>
+                  <li class="nav-categories__item px-3 py-1">Desktop</li>
+                  <li class="nav-categories__item px-3 py-1">Camera</li>
+                  <li class="nav-categories__item px-3 py-1">Toys</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="info flex gap-6">
+            <div class="login">
+              <i class="fa-light fa-user user-icon"></i>
+            </div>
+            <div class="basket relative">
+              <i class="fa-light fa-bag-shopping shopping-icon"></i>
+              <div class="count absolute">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="container mx-auto">
+        <section class="register-modal hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+          <div class="register-field p-12 pb-0 flex justify-center bg-white">
+            <div class="register-box">
+              <h2 class="register-box__header">Welcome To Ecommerce</h2>
+              <p class="register-box__title pb-10">
+                Log in with email & password
+              </p>
+              <form action="" class="register-form">
+                <label for="">Email or Phone Number</label>
+                <input
+                  type="text"
+                  class="email-input"
+                  placeholder="example@mail.com"
+                />
+                <label for="">Password</label>
+                <div class="password-area mb-4">
+                  <input
+                    type="password"
+                    class="password-input"
+                    min="8"
+                    placeholder="********"
+                  />
+                  <i class="fa-light fa-eye show-password"></i>
+                </div>
+                <button class="login-btn btn">Login</button>
+                <div class="horizontal-line text-center mt-4">
+                  <div class="hr"></div>
+                  <span>on</span>
+                  <div class="hr"></div>
+                </div>
+                <button class="facebook-btn btn block mt-4 mb-3">
+                  <i
+                    class="fa-brands fa-facebook mr-3 social-icon"
+                    style="color: #ffffff"
+                  ></i
+                  >Continue with Facebook
+                </button>
+                <button class="google-btn btn block">
+                  <svg
+                    class="social-icon inline-block mr-3 google-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#FFC107"
+                      d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                    <path
+                      fill="#FF3D00"
+                      d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                    ></path>
+                    <path
+                      fill="#4CAF50"
+                      d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                    ></path>
+                    <path
+                      fill="#1976D2"
+                      d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path></svg
+                  >Continue with Google
+                </button>
+              </form>
+              <p class="create-acc text-center mt-4 mb-4 text-textgray">
+                Don’t have account?
+                <a href="#" class="create-acc__link underline">Sign Up</a>
+              </p>
+              <div class="forgotten">
+                <p class="text-center py-4 text-textgray">Forgot your password? <a href="#" class="underline">Reset It</a</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="basket-modal hidden">
+          <div class="basket-field bg-white">
+            <div class="basket-box">
+              <div class="basket-box__info">
+                <i class="fa-light fa-bag-shopping shopping-icon"></i>
+                <span class="product-count">0 item</span>
+                <hr>
+              </div>
+              <div class="basket-box__products">
+                <div class="basket-box__product flex justify-between ">
+                  <div class="basket-box__product-counter">
+                    <i class="fa-solid fa-circle-plus counter-plus"></i>
+                    <p class="item-count no-border">0</p>
+                    <i class="fa-solid fa-circle-minus counter-minus"></i>
+                  </div>
+                  <div class="basket-box__product-img">
+                    <img src="" alt="" class="product-img">
+                  </div>
+                  <div class="basket-box__product-about">
+                    <div class="basket-box__product-name"></div>
+                    <small class="basket-box__product-title"></small>
+                    <div class="basket-box__product-price">0$</div>
+                  </div>
+                  <div class="basket-box__product-settings">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                </div>
+              </div>
+              <a href="checkout.html" class="btn-shop btn no-underline">Checkout Now <span>US$0</span></a>
+              <a href="cart.html" class="btn-cart btn no-underline">View Cart</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
