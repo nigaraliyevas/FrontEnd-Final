@@ -46,3 +46,74 @@ eyeIcon.addEventListener("click", () => {
     eyeIcon.classList.remove("fa-solid");
   }
 });
+
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const hiddenBar = document.querySelector(".hidden-bar");
+plus.addEventListener("click", () => {
+  if (hiddenBar.classList.contains("hidden")) {
+    hiddenBar.classList.remove("hidden");
+  }
+});
+minus.addEventListener("click", () => {
+  const count = document.querySelector(".product-body__count");
+  // if (!count) {
+  //   hiddenBar.classList.add("hidden");
+  // }
+  hiddenBar.classList.add("hidden");
+});
+// header autoplay slider
+$(document).ready(function () {
+  $(".autoplay").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
+
+// main product slider
+$(".responsive").slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
+});
+const deals = document.querySelectorAll(".deals");
+deals.forEach((deal) => {
+  const icon = deal.querySelectorAll(".slick-arrow");
+  icon.forEach((i) => {
+    i.classList.add("slider-buttons");
+  });
+});
