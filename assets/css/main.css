@@ -288,7 +288,9 @@ main {
   cursor: pointer;
 }
 .product:hover .review {
-  display: flex;
+  display: block;
+  top: 0;
+  right: 0;
 }
 .discount {
   width: 70px;
@@ -337,7 +339,8 @@ main {
   background-color: #0f3460;
 }
 .ratings-left__bottom,
-.ratings-right__bottom {
+.ratings-right__bottom,
+.category {
   box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px;
   background-color: white;
   border-radius: 8px;
@@ -369,6 +372,85 @@ main {
 .top-product-right__img {
   width: 270px !important;
 }
-.arrivals-body img {
-  width: 350px;
+.arrivals-body img,
+.big-discounts img {
+  width: 300px;
+}
+.big-discounts .top-product {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px;
+}
+.cars-body__left-item span,
+button {
+  font-size: 19px;
+  font-weight: 600;
+}
+.cars-body__left-item,
+.filter-brand {
+  background-color: #f6f9fc;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.cars-body__left {
+  background-color: white;
+  border-radius: 8px;
+}
+.cars-body__bottom img {
+  width: 300px;
+}
+.cars-body__left-top {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.filter:not(:first-child) {
+  border-left: 1px solid rgb(125, 135, 156);
+  padding-left: 35px;
+  color: rgb(125, 135, 156);
+  cursor: pointer;
+}
+.filter:not(:last-child) {
+  padding-right: 5px;
+  color: rgb(125, 135, 156);
+  cursor: pointer;
+}
+.category {
+  width: 16%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.product:hover,
+category:hover {
+  box-shadow: rgba(3, 0, 71, 0.09) 0px 8px 45px;
+  cursor: pointer;
+}
+.round {
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #f3f5f9;
+  display: inline-block;
+}
+.round svg {
+  stroke: #0f3460 !important;
+  font-size: 25px;
+}
+.about {
+  padding: 50px;
+  background-color: white;
+  box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px;
+  flex: 1;
+  gap: 4.5rem;
+  border-radius: 8px;
+}
+.about span {
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 10px;
 }
