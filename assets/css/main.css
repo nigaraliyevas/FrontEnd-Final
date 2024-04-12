@@ -47,12 +47,12 @@
   border: 1px solid rgb(218, 225, 231);
   border-radius: 30px 0 0 30px;
   height: 44px;
-  padding: 10px 25px;
+  padding: 10px 32px;
   max-width: 600px;
 }
 .search-btn {
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 10px;
   color: rgb(125, 135, 156);
 }
@@ -453,4 +453,37 @@ category:hover {
   font-weight: 600;
   font-size: 20px;
   margin-top: 10px;
+}
+.footer {
+  background-color: #0f3460;
+  color: rgb(174, 180, 190);
+}
+.store {
+  background-color: #0c2a4d;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+.store > * {
+  color: white;
+  font-weight: 500;
+}
+.col-4 h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+}
+.col-4 ul li a:hover {
+  color: white;
+}
+.col-4 ul li a {
+  display: inline-block;
+  padding: 5px 0;
+  font-size: 17px;
+}
+.col-4 .social i {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #0c2a4d;
+  object-fit: cover;
+  color: white;
 }
