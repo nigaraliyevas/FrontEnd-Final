@@ -20,6 +20,7 @@
   width: 160px;
   z-index: 1;
 }
+
 .dropdown-menu ul,
 .nav-categories {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -549,13 +550,6 @@ category:hover {
 
 .dropdown-toggle {
   cursor: pointer;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
 }
 
 .dropdown-item {
