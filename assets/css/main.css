@@ -75,6 +75,7 @@
   background-color: white;
   padding: 10px 51px 10px 10px;
   border-radius: 10px;
+  z-index: 1;
 }
 .nav-categories__item:hover {
   cursor: pointer;
@@ -281,11 +282,14 @@ main {
 }
 .product {
   box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px;
-  border-radius: 5px;
   background-color: white;
   padding: 25px;
   border-radius: 10px;
   cursor: pointer;
+  width: 31%;
+}
+.forme .product {
+  width: fit-content;
 }
 .product:hover .review {
   display: block;
@@ -487,3 +491,128 @@ category:hover {
   object-fit: cover;
   color: white;
 }
+.mobile-side-dropdown {
+  display: none;
+  z-index: 1;
+}
+
+/* Mobile HTML */
+.result-body {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px;
+  padding: 20px;
+}
+.result-body .result-left p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.result-body .result-left:last-child(p) {
+  font-size: 18px;
+  font-weight: 600;
+}
+.choosen-sort {
+  border: 1px solid rgb(218, 225, 231);
+  display: inline-block;
+  padding: 12px;
+  border-radius: 8px;
+}
+.choosen-sort span {
+  margin-right: 35px;
+}
+.icon-sort {
+  display: inline-block;
+  padding: 3px 15px;
+  border-left: 1px solid rgb(218, 225, 231);
+}
+.sort-dropdown__list {
+  padding: 10px;
+}
+.sort-dropdown__list li {
+  font-size: 17px;
+  padding: 15px;
+}
+.sort-dropdown__list li:hover {
+  background-color: rgb(246, 249, 252);
+}
+.sort-dropdown {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: lightgray;
+}
+.glasses-categories {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+.glasses-categories__dropdown ul {
+  margin-left: 20px;
+  transition: 0.3s;
+}
+.glasses-categories li {
+  color: rgb(125, 135, 156);
+  font-size: 16.5px;
+  padding: 8px 0;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.range[type="number"] {
+  border: 1px solid rgb(218, 225, 231);
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(43, 52, 69);
+}
+.ratings ul,
+.stock ul,
+.brands ul {
+  padding: 5px 15px;
+}
+.headers {
+  font-size: 18px;
+  padding: 8px 0;
+  font-weight: 600;
+}
+.category-horizontal-line {
+  width: 250px;
+}
+.color {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  cursor: pointer;
+}
+.showing-items__text {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* .red {
+  stroke: #e94560 !important;
+} */

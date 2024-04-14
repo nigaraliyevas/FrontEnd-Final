@@ -31,6 +31,20 @@ userIcon.addEventListener("click", function () {
   openAndClose(registerModal);
 });
 
+function closeRegister() {
+  window.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("register-modal") &&
+      !e.target.classList.contains("user-icon")
+    ) {
+      const registerModal2 = document.querySelector(".register-modal");
+
+      registerModal2.classList.add("hidden");
+    }
+  });
+}
+
+closeRegister();
 // show password on login
 const eyeIcon = document.querySelector(".show-password");
 eyeIcon.addEventListener("click", () => {
@@ -170,7 +184,7 @@ filterCars.forEach((brands) => {
 const filterBtns = document.querySelectorAll(".filter");
 const shops = document.querySelectorAll(".shops");
 const brands = document.querySelectorAll(".brands");
-
+// filter brands
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
     const target = btn.innerHTML.trim();
@@ -183,4 +197,3 @@ filterBtns.forEach((btn) => {
     }
   });
 });
-

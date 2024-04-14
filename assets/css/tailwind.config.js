@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["../../index.html"],
+  content: ["../../index.html", "../../mobile.html"],
   theme: {
     extend: {
       colors: {
@@ -9,6 +9,7 @@ module.exports = {
         textblack: "rgb(55, 63, 80)",
         inputbordercolor: "rgb(43,52,69)",
         textgray: "rgb(125, 135, 156)",
+        textLightBlackColor: "rgb(43,52,69)",
       },
       borderRadius: {
         inputRadius: "30px",
