@@ -764,282 +764,126 @@
       </div>
     </header>
     <main class="main">
-      <section class="register-modal hidden fixed top-0 left-0 w-full h-full z-10 bg-gray-800 bg-opacity-50 flex items-center justify-center">
-        <div class="register-field p-12 pb-0 flex justify-center bg-white">
-          <div class="register-box">
-            <h2 class="register-box__header">Welcome To Ecommerce</h2>
-            <p class="register-box__title pb-10">
-              Log in with email & password
-            </p>
-            <form action="" class="register-form">
-              <label for="">Email or Phone Number</label>
-              <input
-                type="text"
-                class="email-input"
-                placeholder="example@mail.com"
-              />
-              <label for="">Password</label>
-              <div class="password-area mb-4">
-                <input
-                  type="password"
-                  class="password-input"
-                  min="8"
-                  placeholder="********"
-                />
-                <i class="fa-light fa-eye show-password"></i>
-              </div>
-              <button class="login-btn btn">Login</button>
-              <div class="horizontal-line text-center mt-4">
-                <div class="hr"></div>
-                <span>on</span>
-                <div class="hr"></div>
-              </div>
-              <button class="facebook-btn btn block mt-4 mb-3">
-                <i
-                  class="fa-brands fa-facebook mr-3 social-icon"
-                  style="color: #ffffff"
-                ></i
-                >Continue with Facebook
-              </button>
-              <button class="google-btn btn block">
-                <svg
-                  class="social-icon inline-block mr-3 google-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 48 48"
-                >
-                  <path
-                    fill="#FFC107"
-                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
-                  ></path>
-                  <path
-                    fill="#FF3D00"
-                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
-                  ></path>
-                  <path
-                    fill="#4CAF50"
-                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
-                  ></path>
-                  <path
-                    fill="#1976D2"
-                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
-                  ></path></svg
-                >Continue with Google
-              </button>
-            </form>
-            <p class="create-acc text-center mt-4 mb-4 text-textgray">
-              Don’t have account?
-              <a href="#" class="create-acc__link">Sign Up</a>
-            </p>
-            <div class="forgotten">
-              <p class="text-center py-4 text-textgray">Forgot your password? <a href="#" class="">Reset It</a</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="result py-8">
+      <section class="related-product">
         <div class="container mx-auto">
-          <div class="result-content">
-            <div class="result-body flex justify-between">
-              <div class="result-left">
-                <p class="text-textLightBlackColor"></p>
-                  Searching for “ mobile phone ”
-                </p>
-                <span class="text-textgray">48 result found</span>
-              </div>
-              <div class="result-right flex items-center gap-5">
-                <p class="text-textgray">Short by:</p>
-                <div class="sort">
-                  <span class="choosen-sort"><span>Relevance</span> <i class="fa-solid fa-chevron-down icon-sort"></i></span>
-                  <div class="sort-dropdown hidden">
-                    <ul class="sort-dropdown__list">
-                      <li>Relevance</li>
-                      <li>Date</li>
-                      <li>Price Low to High</li>
-                      <li>Price Hight to Low</li>
-                    </ul>
+          <div class="related-content">
+            <div class="related-body">
+              <div class="related-left">
+                <div class="related-left__top">
+                  <div class="related-img">
+                    <img src="./assets/img/related.png" alt="" />
                   </div>
                 </div>
-                <p class="text-textgray">View: </p>
-                <div class="show-category">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg svg-maing show-category" data-src="/assets/images/icons/grid.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C2 2.44772 2.44772 2 3 2H10C10.5523 2 11 2.44772 11 3V10C11 10.5523 10.5523 11 10 11H3C2.44772 11 2 10.5523 2 10V3ZM4 4V9H9V4H4Z" fill="#E94560"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 3C13 2.44772 13.4477 2 14 2H21C21.5523 2 22 2.44772 22 3V10C22 10.5523 21.5523 11 21 11H14C13.4477 11 13 10.5523 13 10V3ZM15 4V9H20V4H15Z" fill="#E94560"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 14C13 13.4477 13.4477 13 14 13H21C21.5523 13 22 13.4477 22 14V21C22 21.5523 21.5523 22 21 22H14C13.4477 22 13 21.5523 13 21V14ZM15 15V20H20V15H15Z" fill="#E94560"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 14C2 13.4477 2.44772 13 3 13H10C10.5523 13 11 13.4477 11 14V21C11 21.5523 10.5523 22 10 22H3C2.44772 22 2 21.5523 2 21V14ZM4 15V20H9V15H4Z" fill="#E94560"></path>
-                  </svg>
+                <div class="related-left__bottom">
+                  <div class="related-imges">
+                    <div class="related-img-view">
+                      <img src="./assets/img/related.png" alt="" />
+                    </div>
+                    <div class="related-img-view">
+                      <img src="./assets/img/related.png" alt="" />
+                    </div>
+                  </div>
                 </div>
-                <div class="show-bars">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg svg-main show-bar" data-src="/assets/images/icons/menu.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
-                    <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="black"></path>
-                    <path d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z" fill="black"></path>
-                    <path d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z" fill="black"></path>
-                    </svg>
+              </div>
+              <div class="related-right">
+                <div class="related-right__info">
+                  <p class="related-right__name">Lord 2019</p>
+                  <p class="related-right__brand">
+                    Brand : <span>Ziaomi</span>
+                  </p>
+                  <span>Rated : </span>
+                  <div class="stars" bis_skin_checked="1">
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <span> (50)</span>
+                  <p class="related-right__price">US$168.00</p>
+                  <p>Stock Available</p>
+                  <button type="button" class="related-right__btn">
+                    Add to Card
+                  </button>
+                  <div class="related-right__counter">
+                    <i class="fa-regular fa-square-minus related-minus"></i>
+                    <span class="related-right__count">0</span>
+                    <i class="fa-regular fa-square-plus related-plus"></i>
+                  </div>
+                  <p class="related-right__seller">
+                    Sold By: <span>Mobile Store</span>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="glasses py-16">
-        <div class="container mx-auto">
-          <div class="glasses-content">
-            <div class="glasses-body flex gap-4">
-              <div class="glasses-body__left w-[24%]">
-                <div class="glasses-categories">
-                  <div class="categories py-5">
-                    <p class="text-textLightBlackColor headers">Categories</p>
-                  <ul class="glasses-categories__list">
-                    <li>Bath Preparations <i class="fa-solid fa-chevron-right open-hidden "></i>
-                      <div class="glasses-categories__dropdown hidden">
-                        <ul>
-                          <li>Bubble Bath</li>
-                          <li>Bath Capsules</li>
-                          <li>Others</li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>Eye Makeup Preparations</li>
-                    <li>Fragrance</li>
-                    <li>Hair Preparations</li>
-                  </ul>
-                  </div>
-                  <hr class="category-horizontal-line">
-                  <div class="price-range py-5">
-                    <input class="inline-block w-[40%] range" type="number" value="0">
-                    <span class="px-4">-</span>
-                    <input class="inline-block w-[40%] range" type="number" value="250">
-                  </div>
-                  <div class="brands py-5">
-                    <p class="text-textLightBlackColor headers"></p>
-                    <ul>
-                      <li class="list-disc">Maccs</li>
-                      <li class="list-disc">Kaccs</li>
-                      <li class="list-disc">Caccs</li>
-                      <li class="list-disc">Haccs</li>
-                      <li class="list-disc">Taccs</li>
-                    </ul>
-                  </div>
-                  <hr class="category-horizontal-line">
-                  <div class="stock py-5">
-                    <ul>
-                      <li class="list-disc">On Sale</li>
-                      <li class="list-disc">In Stock</li>
-                      <li class="list-disc">Featured</li>
-                    </ul>
-                  </div>
-                  <hr class="category-horizontal-line">
-                  <div class="ratings py-5">
-                    <p class="text-textLightBlackColor headers">Ratings</p>
-                    <ul>
-                      <li class="list-disc">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                      </li>
-                      <li class="list-disc">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                      </li>
-                      <li class="list-disc">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                      </li>
-                      <li class="list-disc">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                      </li>
-                      <li class="list-disc">
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                        <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-                      </li>
-                    </ul>
-                  </div>
-                  <hr class="category-horizontal-line">
-                  <div class="colors py-5">
-                    <p class="text-textLightBlackColor headers">Colors</p>
-                    <div class="color bg-[#1C1C1C] "></div>
-                    <div class="color bg-[#FF7A7A]"></div>
-                    <div class="color bg-[#FFC672]"></div>
-                    <div class="color bg-[#84FFB5]"></div>
-                    <div class="color bg-[#70F6FF]"></div>
-                    <div class="color bg-[#6B7AFF]"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="glasses-body__right">
-                <div class="showing-items">
-                  <div class="showing-items__left">
-                    <p class="text-textgray showing-items__text">Showing 1-9 of 1.3k Products</p>
-                  </div>
-                  <div class="showing-items__right">
-                    <ul class="pagination flex gap-2">
-                      <li class="deactive">
-                        <i class="fa-solid fa-chevron-left"></i>  
-                      </li>
-                      <li class="">1</li>
-                      <li class="">2</li>
-                      <li class="">3</li>
-                      <li class="">4</li>
-                      <li class="">...</li>
-                      <li class="">5</li>
-                      <li class="">6</li>
-                      <li class="">7</li>
-                      <li class="">8</li>
-                      <li class="">9</li>
-                      <li class="">
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>    
     </main>
     <footer class="footer py-16">
       <div class="container mx-auto">
         <div class="footer-content">
           <div class="footer-body flex justify-between gap-5">
             <div class="col-4">
-              <a href="#" class="logo hidden lg:inline-block"><img src="./assets/img/logo.svg" alt="" class="logo-img"></a>
-              <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Auctor libero id et, in gravida. Sit diam duis mauris nulla<br> cursus. Erat et lectus vel ut sollicitudin elit at amet.</p>
+              <a href="#" class="logo hidden lg:inline-block"
+                ><img src="./assets/img/logo.svg" alt="" class="logo-img"
+              /></a>
+              <p class="my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                Auctor libero id et, in gravida. Sit diam duis mauris nulla<br />
+                cursus. Erat et lectus vel ut sollicitudin elit at amet.
+              </p>
               <div class="stores flex gap-16 my-4">
                 <a href="" class="store flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="/assets/images/icons/play-store.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="injected-svg"
+                    data-src="/assets/images/icons/play-store.svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    role="img"
+                  >
                     <g clip-path="url(#clip0-69)">
-                    <path d="M17.9236 8.23227C15.1356 6.67287 10.6607 4.16885 3.71978 0.282486C3.25183 -0.0265614 2.71342 -0.0670615 2.24823 0.090392L14.1569 11.999L17.9236 8.23227Z" fill="#32BBFF"></path>
-                    <path d="M2.24824 0.090332C2.16105 0.119863 2.07621 0.155488 1.99507 0.19852C1.48137 0.476395 1.10388 1.0111 1.10388 1.68737V22.3105C1.10388 22.9868 1.48132 23.5215 1.99507 23.7993C2.07607 23.8423 2.16087 23.8781 2.24796 23.9078L14.1568 11.999L2.24824 0.090332Z" fill="#32BBFF"></path>
-                    <path d="M14.1569 11.999L2.24799 23.9079C2.71331 24.0665 3.25172 24.0291 3.71982 23.7155C10.451 19.9463 14.8754 17.472 17.6957 15.8993C17.7742 15.8552 17.8512 15.8121 17.9272 15.7694L14.1569 11.999Z" fill="#32BBFF"></path>
-                    <path d="M1.10388 11.999V22.3106C1.10388 22.9869 1.48132 23.5216 1.99507 23.7994C2.07607 23.8424 2.16087 23.8782 2.24796 23.9079L14.1568 11.999H1.10388Z" fill="#2C9FD9"></path>
-                    <path d="M3.71978 0.282559C3.16407 -0.0843794 2.50876 -0.0739263 1.99506 0.198699L13.9761 12.1798L17.9235 8.23234C15.1356 6.67295 10.6607 4.16893 3.71978 0.282559Z" fill="#29CC5E"></path>
-                    <path d="M13.9762 11.8184L1.99506 23.7994C2.50881 24.072 3.16407 24.0877 3.71978 23.7155C10.4509 19.9463 14.8754 17.472 17.6957 15.8993C17.7742 15.8552 17.8511 15.8121 17.9271 15.7694L13.9762 11.8184Z" fill="#D93F21"></path>
-                    <path d="M22.8961 11.9989C22.8961 11.4275 22.6078 10.8509 22.0363 10.5311C22.0363 10.5311 20.9676 9.93479 17.6919 8.10254L13.7955 11.9989L17.6957 15.8992C20.9355 14.0801 22.0363 13.4667 22.0363 13.4667C22.6078 13.147 22.8961 12.5703 22.8961 11.9989Z" fill="#FFD500"></path>
-                    <path d="M22.0363 13.4669C22.6078 13.1471 22.8961 12.5704 22.8961 11.999H13.7955L17.6957 15.8993C20.9355 14.0802 22.0363 13.4669 22.0363 13.4669Z" fill="#FFAA00"></path>
+                      <path
+                        d="M17.9236 8.23227C15.1356 6.67287 10.6607 4.16885 3.71978 0.282486C3.25183 -0.0265614 2.71342 -0.0670615 2.24823 0.090392L14.1569 11.999L17.9236 8.23227Z"
+                        fill="#32BBFF"
+                      ></path>
+                      <path
+                        d="M2.24824 0.090332C2.16105 0.119863 2.07621 0.155488 1.99507 0.19852C1.48137 0.476395 1.10388 1.0111 1.10388 1.68737V22.3105C1.10388 22.9868 1.48132 23.5215 1.99507 23.7993C2.07607 23.8423 2.16087 23.8781 2.24796 23.9078L14.1568 11.999L2.24824 0.090332Z"
+                        fill="#32BBFF"
+                      ></path>
+                      <path
+                        d="M14.1569 11.999L2.24799 23.9079C2.71331 24.0665 3.25172 24.0291 3.71982 23.7155C10.451 19.9463 14.8754 17.472 17.6957 15.8993C17.7742 15.8552 17.8512 15.8121 17.9272 15.7694L14.1569 11.999Z"
+                        fill="#32BBFF"
+                      ></path>
+                      <path
+                        d="M1.10388 11.999V22.3106C1.10388 22.9869 1.48132 23.5216 1.99507 23.7994C2.07607 23.8424 2.16087 23.8782 2.24796 23.9079L14.1568 11.999H1.10388Z"
+                        fill="#2C9FD9"
+                      ></path>
+                      <path
+                        d="M3.71978 0.282559C3.16407 -0.0843794 2.50876 -0.0739263 1.99506 0.198699L13.9761 12.1798L17.9235 8.23234C15.1356 6.67295 10.6607 4.16893 3.71978 0.282559Z"
+                        fill="#29CC5E"
+                      ></path>
+                      <path
+                        d="M13.9762 11.8184L1.99506 23.7994C2.50881 24.072 3.16407 24.0877 3.71978 23.7155C10.4509 19.9463 14.8754 17.472 17.6957 15.8993C17.7742 15.8552 17.8511 15.8121 17.9271 15.7694L13.9762 11.8184Z"
+                        fill="#D93F21"
+                      ></path>
+                      <path
+                        d="M22.8961 11.9989C22.8961 11.4275 22.6078 10.8509 22.0363 10.5311C22.0363 10.5311 20.9676 9.93479 17.6919 8.10254L13.7955 11.9989L17.6957 15.8992C20.9355 14.0801 22.0363 13.4667 22.0363 13.4667C22.6078 13.147 22.8961 12.5703 22.8961 11.9989Z"
+                        fill="#FFD500"
+                      ></path>
+                      <path
+                        d="M22.0363 13.4669C22.6078 13.1471 22.8961 12.5704 22.8961 11.999H13.7955L17.6957 15.8993C20.9355 14.0802 22.0363 13.4669 22.0363 13.4669Z"
+                        fill="#FFAA00"
+                      ></path>
                     </g>
                     <defs>
-                    <clipPath id="clip0-69">
-                    <rect width="24" height="24" fill="white"></rect>
-                    </clipPath>
+                      <clipPath id="clip0-69">
+                        <rect width="24" height="24" fill="white"></rect>
+                      </clipPath>
                     </defs>
                   </svg>
                   <div class="inline-block">
@@ -1048,15 +892,46 @@
                   </div>
                 </a>
                 <a href="" class="store flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="/assets/images/icons/app-store.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
-                    <path d="M19.0781 24H4.92188C2.20795 24 0 21.792 0 19.0781V4.92188C0 2.20795 2.20795 0 4.92188 0H19.0781C21.792 0 24 2.20795 24 4.92188V19.0781C24 21.792 21.792 24 19.0781 24Z" fill="#00C3FF"></path>
-                    <path d="M19.0781 0H12V24H19.0781C21.792 24 24 21.792 24 19.0781V4.92188C24 2.20795 21.792 0 19.0781 0Z" fill="#00AAF0"></path>
-                    <path d="M7.38978 18.4929C7.17299 18.8684 6.77825 19.0785 6.37292 19.0786C6.17422 19.0786 5.97303 19.0281 5.78895 18.9218C5.22936 18.5988 5.03694 17.8807 5.36 17.3211L5.59049 16.9219H8.29681L7.38978 18.4929Z" fill="white"></path>
-                    <path d="M5.17969 15.984C4.53352 15.984 4.00781 15.4583 4.00781 14.8122C4.00781 14.166 4.53352 13.6403 5.17969 13.6403H7.48491L10.6468 8.1637L9.78989 6.67945C9.46683 6.11985 9.6592 5.40173 10.2188 5.07862H10.2188C10.7784 4.75556 11.4966 4.94803 11.8196 5.50757L12 5.81999L12.1804 5.50762C12.5036 4.94798 13.2217 4.7556 13.7812 5.07867C14.0522 5.23518 14.2462 5.48788 14.3272 5.79023C14.4082 6.09257 14.3666 6.40842 14.2101 6.67949L10.1912 13.6403H12.7262L14.0794 15.984H5.17969Z" fill="white"></path>
-                    <path d="M18.8203 15.9844H17.8682L18.6399 17.3211C18.963 17.8806 18.7706 18.5988 18.2111 18.9219C18.0304 19.0261 17.83 19.0794 17.6269 19.0794C17.5251 19.0794 17.4228 19.066 17.3217 19.039C17.0194 18.9579 16.7667 18.764 16.6101 18.4929L12.5412 11.4453L13.8943 9.10156L16.5151 13.6407H18.8203C19.4665 13.6407 19.9922 14.1664 19.9922 14.8126C19.9922 15.4587 19.4665 15.9844 18.8203 15.9844Z" fill="#F2F2F2"></path>
-                    <path d="M12 13.6406V15.9844H14.0794L12.7262 13.6406H12Z" fill="#F2F2F2"></path>
-                    <path d="M14.3272 5.7907C14.2461 5.48836 14.0522 5.23561 13.7812 5.07914C13.2217 4.75608 12.5035 4.9484 12.1804 5.50809L12 5.82047V10.508L14.2101 6.67996C14.3666 6.40889 14.4082 6.09309 14.3272 5.7907Z" fill="#F2F2F2"></path>
-                    </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="injected-svg"
+                    data-src="/assets/images/icons/app-store.svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    role="img"
+                  >
+                    <path
+                      d="M19.0781 24H4.92188C2.20795 24 0 21.792 0 19.0781V4.92188C0 2.20795 2.20795 0 4.92188 0H19.0781C21.792 0 24 2.20795 24 4.92188V19.0781C24 21.792 21.792 24 19.0781 24Z"
+                      fill="#00C3FF"
+                    ></path>
+                    <path
+                      d="M19.0781 0H12V24H19.0781C21.792 24 24 21.792 24 19.0781V4.92188C24 2.20795 21.792 0 19.0781 0Z"
+                      fill="#00AAF0"
+                    ></path>
+                    <path
+                      d="M7.38978 18.4929C7.17299 18.8684 6.77825 19.0785 6.37292 19.0786C6.17422 19.0786 5.97303 19.0281 5.78895 18.9218C5.22936 18.5988 5.03694 17.8807 5.36 17.3211L5.59049 16.9219H8.29681L7.38978 18.4929Z"
+                      fill="white"
+                    ></path>
+                    <path
+                      d="M5.17969 15.984C4.53352 15.984 4.00781 15.4583 4.00781 14.8122C4.00781 14.166 4.53352 13.6403 5.17969 13.6403H7.48491L10.6468 8.1637L9.78989 6.67945C9.46683 6.11985 9.6592 5.40173 10.2188 5.07862H10.2188C10.7784 4.75556 11.4966 4.94803 11.8196 5.50757L12 5.81999L12.1804 5.50762C12.5036 4.94798 13.2217 4.7556 13.7812 5.07867C14.0522 5.23518 14.2462 5.48788 14.3272 5.79023C14.4082 6.09257 14.3666 6.40842 14.2101 6.67949L10.1912 13.6403H12.7262L14.0794 15.984H5.17969Z"
+                      fill="white"
+                    ></path>
+                    <path
+                      d="M18.8203 15.9844H17.8682L18.6399 17.3211C18.963 17.8806 18.7706 18.5988 18.2111 18.9219C18.0304 19.0261 17.83 19.0794 17.6269 19.0794C17.5251 19.0794 17.4228 19.066 17.3217 19.039C17.0194 18.9579 16.7667 18.764 16.6101 18.4929L12.5412 11.4453L13.8943 9.10156L16.5151 13.6407H18.8203C19.4665 13.6407 19.9922 14.1664 19.9922 14.8126C19.9922 15.4587 19.4665 15.9844 18.8203 15.9844Z"
+                      fill="#F2F2F2"
+                    ></path>
+                    <path
+                      d="M12 13.6406V15.9844H14.0794L12.7262 13.6406H12Z"
+                      fill="#F2F2F2"
+                    ></path>
+                    <path
+                      d="M14.3272 5.7907C14.2461 5.48836 14.0522 5.23561 13.7812 5.07914C13.2217 4.75608 12.5035 4.9484 12.1804 5.50809L12 5.82047V10.508L14.2101 6.67996C14.3666 6.40889 14.4082 6.09309 14.3272 5.7907Z"
+                      fill="#F2F2F2"
+                    ></path>
+                  </svg>
                   <div class="inline-block">
                     <small>Get it on</small>
                     <p>Google Play</p>
@@ -1086,7 +961,10 @@
             </div>
             <div class="col-4">
               <h2 class="my-4">Contact Us</h2>
-              <p class="my-2">70 Washington Square South, New York ,<br> NY 10012, United States</p>
+              <p class="my-2">
+                70 Washington Square South, New York ,<br />
+                NY 10012, United States
+              </p>
               <p class="my-2">Email: uilib.help@gmail.com</p>
               <p class="my-2">Phone: +1 1123 456 780</p>
               <ul class="social flex gap-5">
@@ -1111,7 +989,6 @@
         </div>
       </div>
     </footer>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -1120,5 +997,6 @@
     ></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/mobile.js"></script>
+    <script src="./assets/js/product.js"></script>
   </body>
 </html>
