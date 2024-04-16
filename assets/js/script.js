@@ -43,7 +43,6 @@ function closeRegister() {
     }
   });
 }
-
 closeRegister();
 // show password on login
 const eyeIcon = document.querySelector(".show-password");
@@ -159,7 +158,7 @@ $(".responsive-6").slick({
     // instead of a settings object
   ],
 });
-// change slider butttons style
+// change slider buttons style
 const deals = document.querySelectorAll(".deals");
 deals.forEach((deal) => {
   const icon = deal.querySelectorAll(".slick-arrow");

@@ -53,7 +53,7 @@
               <a href="" class="left-side__email">support@ui-lib.com</a>
             </div>
           </div>
-          <a href="#" class="logo lg:hidden"
+          <a href="./index.html" class="logo lg:hidden"
             ><img src="./assets/img/logo.svg" alt="" class="logo-img w-20"
           /></a>
           <div class="top-nav__right right-side flex gap-4">
@@ -750,7 +750,9 @@
             <div class="bottom-nav__right nav-right py-4">
               <nav class="nav-right">
                 <ul class="nav-right__list flex gap-5">
-                  <li class="nav-right__item list-none">Home</li>
+                  <li class="nav-right__item list-none">
+                    <a href="./index.html">Home</a>
+                  </li>
                   <li class="nav-right__item list-none">Pages</li>
                   <li class="nav-right__item list-none">User Account</li>
                   <li class="nav-right__item list-none">Vendor Account</li>
@@ -764,57 +766,622 @@
       </div>
     </header>
     <main class="main">
-      <section class="related-product">
+      <section class="related-product py-9">
         <div class="container mx-auto">
           <div class="related-content">
-            <div class="related-body">
-              <div class="related-left">
+            <div class="related-body flex gap-16">
+              <div class="related-left p-[32px]">
                 <div class="related-left__top">
                   <div class="related-img">
                     <img src="./assets/img/related.png" alt="" />
                   </div>
                 </div>
                 <div class="related-left__bottom">
-                  <div class="related-imges">
-                    <div class="related-img-view">
+                  <div class="related-images flex gap-5 justify-center">
+                    <div class="related-img-view view-left">
                       <img src="./assets/img/related.png" alt="" />
                     </div>
-                    <div class="related-img-view">
-                      <img src="./assets/img/related.png" alt="" />
+                    <div class="related-img-view view-right">
+                      <img src="./assets/img/related2.png" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="related-right">
+              <div class="related-right p-[32px]">
                 <div class="related-right__info">
-                  <p class="related-right__name">Lord 2019</p>
-                  <p class="related-right__brand">
-                    Brand : <span>Ziaomi</span>
+                  <p class="related-right__name !text-3xl font-medium py-5">
+                    Lord 2019
                   </p>
-                  <span>Rated : </span>
-                  <div class="stars" bis_skin_checked="1">
+                  <p class="related-right__brand py-2">
+                    Brand : <span class="px-2">Ziaomi</span>
+                  </p>
+                  <span class="related-right__rating">Rated : </span>
+                  <div
+                    class="stars inline-block px-2 py-2"
+                    bis_skin_checked="1"
+                  >
                     <i class="fa-solid fa-star" style="color: #ffd43b"></i>
                     <i class="fa-solid fa-star" style="color: #ffd43b"></i>
                     <i class="fa-solid fa-star" style="color: #ffd43b"></i>
                     <i class="fa-solid fa-star" style="color: #ffd43b"></i>
                     <i class="fa-regular fa-star" style="color: #ffd43b"></i>
                   </div>
-                  <span> (50)</span>
-                  <p class="related-right__price">US$168.00</p>
-                  <p>Stock Available</p>
-                  <button type="button" class="related-right__btn">
+                  <span class="related-right__review font-medium"> (50)</span>
+                  <p class="related-right__price pt-2">US$168.00</p>
+                  <p class="related-right__available">Stock Available</p>
+                  <button type="button" class="btn related-right__btn my-4" id="click">
                     Add to Card
                   </button>
-                  <div class="related-right__counter">
-                    <i class="fa-regular fa-square-minus related-minus"></i>
+                  <div class="related-right__counter py-2 hidden">
+                    <i class="fa-thin fa-square-minus related-minus mr-5"></i>
                     <span class="related-right__count">0</span>
-                    <i class="fa-regular fa-square-plus related-plus"></i>
+                    <i class="fa-thin fa-square-plus related-plus ml-5"></i>
                   </div>
-                  <p class="related-right__seller">
-                    Sold By: <span>Mobile Store</span>
-                  </p>
+                  <br />
+                  <span class="related-right__seller">Sold By:</span>
+                  <span class="related-right__seller-name">Mobile Store</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="descriptions py-8">
+        <div class="container mx-auto">
+          <div class="description-content">
+            <div class="description-body">
+              <span class="description-info__btn mr-3 desc-btn">Description</span>
+              <span class="description-info__btn review-btn">Review(3)</span>
+              <hr class="descriptions-hr-line" />
+              <div class="description-info">
+                <p class="description-info__name py-4 text-2xl font-medium">
+                  Specification:
+                </p>
+                <div class="description-info__all py-2 pb-4">
+                  <p>Brand: Beats</p>
+                  <p>Model: S450</p>
+                  <p>Wireless Bluetooth Headset</p>
+                  <p>FM Frequency Response: 87.5 – 108 MHz</p>
+                  <p>Feature: FM Radio, Card Supported (Micro SD / TF)</p>
+                  <p>Made in China</p>
+                </div>
+              </div>
+              <div class="review-info hidden">
+                <div class="comments">
+                  <div class="comment py-8">
+                    <div class="comment-top flex gap-3">
+                      <div class="comment-top__left">
+                        <div class="comment-top__left-img">
+                          <img src="./assets/img/person.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="comment-top__right">
+                        <p
+                          class="comment-top__right-name text-textblack font-medium text-xl"
+                        >
+                          Jannie Schumm
+                        </p>
+                        <div
+                          class="stars inline-block py-2"
+                          bis_skin_checked="1"
+                        >
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-regular fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                        </div>
+                        <span class="mr-2">4</span>
+                        <span class="mr-2 text-textgray">3.3 years ago</span>
+                      </div>
+                    </div>
+                    <div class="comment-bottom">
+                      <p class="text-textgray text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Varius massa id ut mattis. Facilisis <br />
+                        vitae gravida egestas ac account.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="comment py-8">
+                    <div class="comment-top flex gap-3">
+                      <div class="comment-top__left">
+                        <div class="comment-top__left-img">
+                          <img src="./assets/img/person.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="comment-top__right">
+                        <p
+                          class="comment-top__right-name text-textblack font-medium text-xl"
+                        >
+                          Jannie Schumm
+                        </p>
+                        <div
+                          class="stars inline-block py-2"
+                          bis_skin_checked="1"
+                        >
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-regular fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                        </div>
+                        <span class="mr-2">4</span>
+                        <span class="mr-2 text-textgray">3.3 years ago</span>
+                      </div>
+                    </div>
+                    <div class="comment-bottom">
+                      <p class="text-textgray text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Varius massa id ut mattis. Facilisis <br />
+                        vitae gravida egestas ac account.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="comment py-8">
+                    <div class="comment-top flex gap-3">
+                      <div class="comment-top__left">
+                        <div class="comment-top__left-img">
+                          <img src="./assets/img/person.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="comment-top__right">
+                        <p
+                          class="comment-top__right-name text-textblack font-medium text-xl"
+                        >
+                          Jannie Schumm
+                        </p>
+                        <div
+                          class="stars inline-block py-2"
+                          bis_skin_checked="1"
+                        >
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-solid fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                          <i
+                            class="fa-regular fa-star"
+                            style="color: #ffd43b"
+                          ></i>
+                        </div>
+                        <span class="mr-2">4</span>
+                        <span class="mr-2 text-textgray">3.3 years ago</span>
+                      </div>
+                    </div>
+                    <div class="comment-bottom">
+                      <p class="text-textgray text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Varius massa id ut mattis. Facilisis <br />
+                        vitae gravida egestas ac account.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <form action="" class="form py-8">
+                  <p class="form-full text-2xl font-medium text-textblack py-2">
+                    Write a Review for this product
+                  </p>
+                  <p class="text-lg font-medium text-textgray">
+                    Your Rating
+                    <span class="text-red-500">*</span>
+                  </p>
+                  <div class="stars inline-block py-2" bis_skin_checked="1">
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                    <i class="fa-regular fa-star" style="color: #ffd43b"></i>
+                  </div>
+                  <p class="text-lg font-medium text-textgray py-3">
+                    Your Review
+                    <span class="text-red-500">*</span>
+                  </p>
+                  <div class="w-100">
+                    <textarea
+                      name=""
+                      id=""
+                      rows="8"
+                      class="block w-[100%] textarea-review"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn review-sumbit my-4">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bought-all py-8">
+        <div class="container mx-auto">
+          <div class="bought-content">
+            <div class="bought-body">
+              <p class="font-medium text-2xl py-8">Frequently Bought Together</p>
+              <div class="bought-products flex gap-5 items-center">
+                <div class="bought-product">
+                  <div class="bought-product__body p-3">
+                    <div class="bought-product__img w-[200px]">
+                      <img src="./assets/img/product.webp" alt="" class="">
+                    </div>
+                    <p class="bought-product__name overflow-ellipsis">
+                      Premium Grocery Collection
+                    </p>
+                    <span class="bought-product__discounted-price">US$220.00</span>
+                    <s class="bought-product__price">US$250.00</s>
+                  </div>
+                </div>
+                <p class="text-4xl font-medium text-textgray">+</p>
+                <div class="bought-product">
+                  <div class="bought-product__body p-3">
+                    <div class="bought-product__img w-[200px]">
+                      <img src="./assets/img/product.webp" alt="" class="">
+                    </div>
+                    <p class="bought-product__name overflow-ellipsis">
+                      Premium Grocery Collection
+                    </p>
+                    <span class="bought-product__discounted-price">US$220.00</span>
+                    <s class="bought-product__price">US$250.00</s>
+                  </div>
+                </div>
+                <p class="text-4xl font-medium text-textgray">+</p>
+                <div class="bought-product">
+                  <div class="bought-product__body p-3">
+                    <div class="bought-product__img w-[200px]">
+                      <img src="./assets/img/product.webp" alt="" class="">
+                    </div>
+                    <p class="bought-product__name overflow-ellipsis">
+                      Premium Grocery Collection
+                    </p>
+                    <span class="bought-product__discounted-price">US$220.00</span>
+                    <s class="bought-product__price">US$250.00</s>
+                  </div>
+                </div>
+                <p class="text-4xl font-medium text-textgray">+</p>
+                <div class="bought-product">
+                  <div class="bought-product__body p-3">
+                    <div class="bought-product__img w-[200px]">
+                      <img src="./assets/img/product.webp" alt="" class="">
+                    </div>
+                    <p class="bought-product__name overflow-ellipsis">
+                      Premium Grocery Collection
+                    </p>
+                    <span class="bought-product__discounted-price">US$220.00</span>
+                    <s class="bought-product__price">US$250.00</s>
+                  </div>
+                </div>
+                <p class="text-4xl font-medium text-textgray">=</p>
+                <div class="total-bought p-5">
+                  <div class="total-bought__body flex items-center flex-col justify-center h-[140px]">
+                    <p class="bought-product__discounted-price py-1 !text-2xl">$880</p>
+                    <p class="text-textgray font-medium py-1">Save $120</p>
+                    <div class="py-1">
+                      <button class="btn inline-block btn-bought bg-[#e94560]">Add to Cart</button>
+                      <button class="btn inline-block btn-bought btn-bg-white">Add to List</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="available-products py-8">
+        <div class="container mx-auto">
+          <div class="available-products-content">
+            <div class="available-products-body">
+              <p class="text-2xl font-medium py-8">Also Available at</p>
+              <div class="available-products__list flex gap-5">
+                <div class="available-products__item p-8">
+                  <div class="available-products__item-img flex justify-center">
+                    <img src="./assets/img/propic.png" alt="">
+                  </div>
+                  <p class="font-medium text-xl py-3  text-textblack">Scarlett Beauty</p>
+                </div>
+                <div class="available-products__item p-8">
+                  <div class="available-products__item-img flex justify-center">
+                    <img src="./assets/img/propic.png" alt="">
+                  </div>
+                  <p class="font-medium text-xl py-3  text-textblack">Scarlett Beauty</p>
+                </div>
+                <div class="available-products__item p-8">
+                  <div class="available-products__item-img flex justify-center">
+                    <img src="./assets/img/propic.png" alt="">
+                  </div>
+                  <p class="font-medium text-xl py-3  text-textblack">Scarlett Beauty</p>
+                </div>
+                <div class="available-products__item p-8">
+                  <div class="available-products__item-img flex justify-center">
+                    <img src="./assets/img/propic.png" alt="">
+                  </div>
+                  <p class="font-medium text-xl py-3  text-textblack">Scarlett Beauty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="other-products py-8">
+        <div class="container mx-auto">
+          <div class="other-products-content">
+            <p class="text-textblack font-medium text-2xl py-8">Related Products</p>
+            <div class="cars-body__bottom pb-16" bis_skin_checked="1">
+              <div class="all-products flex flex-wrap gap-y-3" bis_skin_checked="1">
+                <div class="product mr-4 !w-[23%]" bis_skin_checked="1">
+                  <div class="product-body" bis_skin_checked="1">
+                    <div class="product-body-top flex justify-between relative" bis_skin_checked="1">
+                      <span class="btn discount">25% off</span>
+                      <div class="hidden review flex flex-col gap-3 absolute" bis_skin_checked="1">
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-solid fa-eye icon"></i>
+                        </div>
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-regular fa-heart icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-body-image" bis_skin_checked="1">
+                      <img src="./assets/img/colgate.webp" alt="">
+                    </div>
+                    <div class="product-body-info flex justify-between items-center" bis_skin_checked="1">
+                      <div class="product-body-left" bis_skin_checked="1">
+                        <p class="font-medium text-inputbordercolor text-lg">Lord 2019</p>
+                        <div class="stars" bis_skin_checked="1">
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <span class="product-discounted font-medium">US$187.50</span>
+                        <s class="product-price ml-3">US$250.00</s>
+                      </div>
+                      <div class="product-body-right" bis_skin_checked="1">
+                        <div class="hidden hidden-bar flex flex-col" bis_skin_checked="1">
+                          <i class="fa-light fa-square-minus minus text-xl" style="color: #e94560;"></i>
+                          <span class="product-body__count text-xl">0</span>
+                        </div>
+                        <i class="fa-light fa-square-plus plus text-xl" style="color: #e94560;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product mr-4 !w-[23%]" bis_skin_checked="1">
+                  <div class="product-body" bis_skin_checked="1">
+                    <div class="product-body-top flex justify-between relative" bis_skin_checked="1">
+                      <span class="btn discount">15% off</span>
+                      <div class="hidden review flex flex-col gap-3 absolute" bis_skin_checked="1">
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-solid fa-eye icon"></i>
+                        </div>
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-regular fa-heart icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-body-image" bis_skin_checked="1">
+                      <img src="./assets/img/colgate.webp" alt="">
+                    </div>
+                    <div class="product-body-info flex justify-between items-center" bis_skin_checked="1">
+                      <div class="product-body-left" bis_skin_checked="1">
+                        <p class="font-medium text-inputbordercolor text-lg">Budi 2017</p>
+                        <div class="stars" bis_skin_checked="1">
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <span class="product-discounted font-medium">US$187.50</span>
+                        <s class="product-price ml-3">US$250.00</s>
+                      </div>
+                      <div class="product-body-right" bis_skin_checked="1">
+                        <div class="hidden hidden-bar flex flex-col" bis_skin_checked="1">
+                          <i class="fa-light fa-square-minus minus text-xl" style="color: #e94560;"></i>
+                          <span class="product-body__count text-xl">0</span>
+                        </div>
+                        <i class="fa-light fa-square-plus plus text-xl" style="color: #e94560;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product mr-4 !w-[23%]" bis_skin_checked="1">
+                  <div class="product-body" bis_skin_checked="1">
+                    <div class="product-body-top flex justify-between relative" bis_skin_checked="1">
+                      <span class="btn discount">18% off</span>
+                      <div class="hidden review flex flex-col gap-3 absolute" bis_skin_checked="1">
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-solid fa-eye icon"></i>
+                        </div>
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-regular fa-heart icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-body-image" bis_skin_checked="1">
+                      <img src="./assets/img/colgate.webp" alt="">
+                    </div>
+                    <div class="product-body-info flex justify-between items-center" bis_skin_checked="1">
+                      <div class="product-body-left" bis_skin_checked="1">
+                        <p class="font-medium text-inputbordercolor text-lg">Resla 2015</p>
+                        <div class="stars" bis_skin_checked="1">
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <span class="product-discounted font-medium">US$187.50</span>
+                        <s class="product-price ml-3">US$250.00</s>
+                      </div>
+                      <div class="product-body-right" bis_skin_checked="1">
+                        <div class="hidden hidden-bar flex flex-col" bis_skin_checked="1">
+                          <i class="fa-light fa-square-minus minus text-xl" style="color: #e94560;"></i>
+                          <span class="product-body__count text-xl">0</span>
+                        </div>
+                        <i class="fa-light fa-square-plus plus text-xl" style="color: #e94560;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product mr-4 !w-[23%]" bis_skin_checked="1">
+                  <div class="product-body" bis_skin_checked="1">
+                    <div class="product-body-top flex justify-between relative" bis_skin_checked="1">
+                      <span class="btn discount">18% off</span>
+                      <div class="hidden review flex flex-col gap-3 absolute" bis_skin_checked="1">
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-solid fa-eye icon"></i>
+                        </div>
+                        <div class="" bis_skin_checked="1">
+                          <i class="fa-regular fa-heart icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-body-image" bis_skin_checked="1">
+                      <img src="./assets/img/colgate.webp" alt="">
+                    </div>
+                    <div class="product-body-info flex justify-between items-center" bis_skin_checked="1">
+                      <div class="product-body-left" bis_skin_checked="1">
+                        <p class="font-medium text-inputbordercolor text-lg">Resla 2015</p>
+                        <div class="stars" bis_skin_checked="1">
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                          <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <span class="product-discounted font-medium">US$187.50</span>
+                        <s class="product-price ml-3">US$250.00</s>
+                      </div>
+                      <div class="product-body-right" bis_skin_checked="1">
+                        <div class="hidden hidden-bar flex flex-col" bis_skin_checked="1">
+                          <i class="fa-light fa-square-minus minus text-xl" style="color: #e94560;"></i>
+                          <span class="product-body__count text-xl">0</span>
+                        </div>
+                        <i class="fa-light fa-square-plus plus text-xl" style="color: #e94560;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="register-modal hidden fixed top-0 left-0 w-full h-full z-10 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="register-field p-12 pb-0 flex justify-center bg-white">
+          <div class="register-box">
+            <h2 class="register-box__header">Welcome To Ecommerce</h2>
+            <p class="register-box__title pb-10">
+              Log in with email & password
+            </p>
+            <form action="" class="register-form">
+              <label for="">Email or Phone Number</label>
+              <input
+                type="text"
+                class="email-input"
+                placeholder="example@mail.com"
+              />
+              <label for="">Password</label>
+              <div class="password-area mb-4">
+                <input
+                  type="password"
+                  class="password-input"
+                  min="8"
+                  placeholder="********"
+                />
+                <i class="fa-light fa-eye show-password"></i>
+              </div>
+              <button class="login-btn btn">Login</button>
+              <div class="horizontal-line text-center mt-4">
+                <div class="hr"></div>
+                <span>on</span>
+                <div class="hr"></div>
+              </div>
+              <button class="facebook-btn btn block mt-4 mb-3">
+                <i
+                  class="fa-brands fa-facebook mr-3 social-icon"
+                  style="color: #ffffff"
+                ></i
+                >Continue with Facebook
+              </button>
+              <button class="google-btn btn block">
+                <svg
+                  class="social-icon inline-block mr-3 google-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#FFC107"
+                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                  ></path>
+                  <path
+                    fill="#FF3D00"
+                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                  ></path>
+                  <path
+                    fill="#4CAF50"
+                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                  ></path>
+                  <path
+                    fill="#1976D2"
+                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                  ></path></svg
+                >Continue with Google
+              </button>
+            </form>
+            <p class="create-acc text-center mt-4 mb-4 text-textgray">
+              Don’t have account?
+              <a href="#" class="create-acc__link">Sign Up</a>
+            </p>
+            <div class="forgotten">
+              <p class="text-center py-4 text-textgray">Forgot your password? <a href="#" class="">Reset It</a</p>
             </div>
           </div>
         </div>
