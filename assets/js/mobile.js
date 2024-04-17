@@ -1,16 +1,11 @@
-function closeRegister() {
-  window.addEventListener("click", (e) => {
-    if (
-      e.target.classList.contains("register-modal") &&
-      !e.target.classList.contains("user-icon")
-    ) {
-      const registerModal2 = document.querySelector(".register-modal");
-
-      registerModal2.classList.add("hidden");
-    }
-  });
+"use strict";
+function openAndClose(element) {
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+  } else {
+    element.classList.add("hidden");
+  }
 }
-
 // open category
 const dropdownMobile = document.querySelector(".mobile-side-dropdown");
 const dropdownIcon = document.getElementById("down-icon");
@@ -22,12 +17,40 @@ dropdownIcon.addEventListener("click", function () {
 $("#down-icon").click(function () {
   $(".mobile-side-dropdown").toggle();
 });
+
 $(".open-hidden").click(function () {
   $(".glasses-categories__dropdown").toggle(500);
 });
 
 $(".icon-sort").click(function () {
   $(".sort-dropdown").toggle();
+});
+
+const sortDropdown = document.querySelectorAll(".sort-dropdown__list li");
+
+sortDropdown.forEach((item) => {
+  item.addEventListener("click", function () {
+    const selectedSortOption = this.textContent;
+    const choosenSortSpan = document.querySelector(".choosen-sort span");
+    choosenSortSpan.textContent = selectedSortOption;
+  });
+});
+
+const dropIcon = document.querySelectorAll(".icon-sort");
+
+dropIcon.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    const sortDropdownContainer = this.closest(".sort-dropdown");
+    sortDropdownContainer.classList.toggle("hidden");
+  });
+});
+
+$(".icon-sort").click(function () {
+  $(".sort-dropdown").toggle();
+});
+
+$(".open-hidden").click(function () {
+  $(".glasses-categories__dropdown").toggle(500);
 });
 
 $(document).ready(function () {

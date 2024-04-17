@@ -683,6 +683,12 @@ category:hover {
 .review-sumbit {
   display: inline-block;
   width: 150px;
+}
+.not-active-review {
+  background-color: rgb(218, 225, 231);
+  color: rgb(125, 135, 156);
+}
+.active-review {
   background-color: rgb(233, 69, 96);
 }
 .bought-product {
