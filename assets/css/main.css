@@ -741,3 +741,44 @@ category:hover {
   background-color: white;
   box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px 0px;
 }
+/* WISHLIST CSS */
+.add-all-btn {
+  background-color: rgb(255, 225, 230);
+  color: #e94560;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  padding: 10px;
+}
+.dashboard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(3, 0, 71, 0.09) 0px 1px 3px 0px;
+  padding: 12px;
+}
+.dashboard-body {
+  padding: 10px 20px;
+}
+.dashboard-body__top-item:hover .vertical-line {
+  display: inline-block;
+}
+.dashboard-body__top-item:hover .red-counts {
+  color: rgb(233, 69, 96);
+}
+.dashboard-body__top-item {
+  padding: 10px 0;
+}
+.pagination li {
+  cursor: pointer;
+  margin-right: 40px;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+.pagination li:first-child,
+.pagination li:last-child {
+  border-radius: 50%;
+  border: 1px solid #e94560;
+}
+.selected-page {
+  border: 1px solid #e94560;
+}

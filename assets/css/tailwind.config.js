@@ -10,6 +10,7 @@ module.exports = {
         inputbordercolor: "rgb(43,52,69)",
         textgray: "rgb(125, 135, 156)",
         textLightBlackColor: "rgb(43,52,69)",
+        textLightRed: "rgb(233, 69, 96)",
       },
       borderRadius: {
         inputRadius: "30px",
