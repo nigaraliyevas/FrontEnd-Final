@@ -38,10 +38,12 @@ sortDropdown.forEach((item) => {
 
 const dropIcon = document.querySelectorAll(".icon-sort");
 
+
 dropIcon.forEach((icon) => {
   icon.addEventListener("click", function () {
     const sortDropdownContainer = this.closest(".sort-dropdown");
     sortDropdownContainer.classList.toggle("hidden");
+
   });
 });
 
@@ -52,7 +54,6 @@ $(".icon-sort").click(function () {
 $(".open-hidden").click(function () {
   $(".glasses-categories__dropdown").toggle(500);
 });
-
 
 document.querySelectorAll(".pagination li").forEach((li) => {
   li.addEventListener("click", function () {

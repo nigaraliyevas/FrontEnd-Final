@@ -129,6 +129,11 @@ filterBtns.forEach((btn) => {
   });
 });
 
+// shop modal opens
+$(".shopping-icon").click(function () {
+  $(".basket-modal").toggle();
+});
+
 let basketProducts = [];
 
 if (localStorage.getItem("basket") === null) {
@@ -136,88 +141,111 @@ if (localStorage.getItem("basket") === null) {
 } else {
   basketProducts = JSON.parse(localStorage.getItem("basket"));
 }
-// shopBtns.forEach((btn) => {
-//   btn.addEventListener("click", function (ev) {
-//     const findProduct = this.closest(".product");
-//     const productId = findProduct
-//       .querySelector(".product-body")
-//       .getAttribute("id");
-
-//     const existProduct = basketProducts.find((p) => p.id == productId);
-//     if (existProduct) {
-//       existProduct.count++;
-
-//       const shopProducts = document.querySelectorAll(
-//         ".shop-products .shop-product"
-//       );
-
-//       shopProducts.forEach((product) => {
-//         if (product.getAttribute("id") === productId) {
-//           product.querySelector(".shop-product__counter input").value =
-//             existProduct.count;
-//         }
-//       });
-//     } else {
-//       const product = {
-//         id: productId,
-//         img: findProduct.querySelector(".product-img").getAttribute("src"),
-//         category: findProduct.querySelector(".product-category").innerHTML,
-//         name: findProduct.querySelector(".product-name").innerHTML,
-//         price: findProduct.querySelector(".product-price").innerHTML,
-//         count: 1,
-//       };
-//       basketProducts.push(product);
-//       appendProducts();
-//     }
-//     localStorage.setItem("basket", JSON.stringify(basketProducts));
-//     calcBasketCount();
-//   });
-// });
-
 const plusBtns = document.querySelectorAll(".plus");
 plusBtns.forEach((plus) => {
   plus.addEventListener("click", function () {
     if (this.previousElementSibling.classList.contains("hidden")) {
       this.previousElementSibling.classList.remove("hidden");
     }
+    const findProduct = this.closest(".product");
+    const productId = findProduct
+      .querySelector(".product-body")
+      .getAttribute("id");
+    const existProduct = basketProducts.find((p) => p.id == productId);
+    console.log(productId);
+
+    if (existProduct) {
+      existProduct.count++;
+      updateProductCartCount(findProduct, existProduct.count);
+    } else {
+      const product = {
+        id: productId,
+        img: findProduct
+          .querySelector(".product-body-image img")
+          .getAttribute("src"),
+        name: findProduct.querySelector(".product-body-left p").innerHTML,
+        price: findProduct.querySelector(".product-discounted").innerHTML,
+        count: 1,
+      };
+      basketProducts.push(product);
+      updateProductCartCount(findProduct, product.count);
+    }
+    localStorage.setItem("basket", JSON.stringify(basketProducts));
+    calcBasketCount();
   });
 });
+
 const minusBtns = document.querySelectorAll(".minus");
+minusBtns.forEach((minus) => {
+  minus.addEventListener("click", function () {
+    const findProduct = this.closest(".product");
+    const productId = findProduct
+      .querySelector(".product-body")
+      .getAttribute("id");
+    const existProduct = basketProducts.find((p) => p.id == productId);
 
+    if (existProduct) {
+      if (existProduct.count > 0) {
+        existProduct.count--;
+        updateProductCartCount(findProduct, existProduct.count);
+      }
 
+      if (existProduct.count === 0) {
+        const productIndex = basketProducts.findIndex(
+          (p) => p.id === productId
+        );
+        if (productIndex !== -1) {
+          basketProducts.splice(productIndex, 1);
+          this.parentElement.classList.add("hidden");
+        }
+      }
+    }
 
+    localStorage.setItem("basket", JSON.stringify(basketProducts));
+    calcBasketCount();
+  });
+});
 
-// const shopProducts = document.querySelector(".shop-products");
-// function appendProducts() {
-//   shopProducts.innerHTML = "";
-//   basketProducts.forEach((product) => {
-//     shopProducts.innerHTML += `<div class="shop-product" id="${product.id}">
-//     <div class="shop-product__img">
-//       <img src="${product.img}" alt="">
-//       </div>
-//       <div class="shop-product__content">
-//         <p class="shop-product__category">${product.category}</p>
-//         <p class="shop-product__name">${product.name}</p>
-//       </div>
-//       <div class="shop-product__total">
-//         <p class="product-product__price">${product.price} AZN</p>
-//       </div>
-//       <div class="shop-product__counter">
-//         <button class="counter-minus">-</button>
-//         <input type="number" value="${product.count}" min="1" max="10" class="shop-product__count" />
-//         <button class="counter-plus">+</button>
-//       </div>
-//       <div class="shop-product__settings">
-//         <button class="shop-product__remove">
-//           <i class="fa-solid fa-trash"></i>
-//         </button>
-//       </div>
-//   </div>
-//     `;
-//   });
-//   removeProducts();
-//   increaseCount();
-//   decreaseCount();
-// }
+function decreaseCount() {
+  const minusBtn = document.querySelectorAll(".counter-minus");
+  minusBtn.forEach((minus, index) => {
+    minus.addEventListener("click", function () {
+      if (basketProducts[index] && basketProducts[index].count > 0) {
+        basketProducts[index].count--;
+        const productElement = document.getElementById(
+          `#${basketProducts[index]}`
+        );
+      }
+      if (basketProducts[index].count === 0) {
+        basketProducts[index].id.classList.add("d-none");
+        basketProducts = basketProducts.filter(
+          (pr) => pr.id !== basketProducts[index].id
+        );
+        updateAllData();
+        appendProducts();
+      }
+      calcBasketCount();
+      updateAllData();
+      appendProducts();
+    });
+  });
+}
 
-// appendProducts();
+function calcBasketCount() {
+  const countBasket = document.querySelector(".count");
+  let length = 0;
+  for (let i = 0; i < basketProducts.length; i++) {
+    length += basketProducts[i].count;
+  }
+  countBasket.innerText = length;
+}
+
+function updateProductCartCount(p, count) {
+  const relatedProduct = p.querySelector(".product-body__count");
+  relatedProduct.innerHTML = count;
+}
+function updateAllData() {
+  localStorage.setItem("basket", JSON.stringify(basketProducts));
+  calcBasketCount();
+}
+calcBasketCount();
