@@ -53,7 +53,7 @@
               <a href="" class="left-side__email">support@ui-lib.com</a>
             </div>
           </div>
-          <a href="#" class="logo lg:hidden"
+          <a href="./index.html" class="logo lg:hidden"
             ><img src="./assets/img/logo.svg" alt="" class="logo-img w-20"
           /></a>
           <div class="top-nav__right right-side flex gap-4">
@@ -156,7 +156,7 @@
         <div
           class="md:container md:mx-auto flex justify-between py-3 px-4 items-center"
         >
-          <a href="#" class="logo hidden lg:inline-block"
+          <a href="./index.html" class="logo hidden lg:inline-block"
             ><img src="./assets/img/logo.svg" alt="" class="logo-img"
           /></a>
           <div class="search-area flex">
@@ -795,7 +795,7 @@
       </section>
       <section class="shipping">
         <div class="container mx-auto">
-          <div class="shipping-content flex">
+          <div class="shipping-content flex gap-10">
             <section class="shipping-left w-[65%] pb-16">
               <div class="shipping-body mb-10" bis_skin_checked="1">
                 <div class="shipping-address" bis_skin_checked="1">
@@ -1545,19 +1545,118 @@
                 </div>
               </div>
             </section>
-            <section class="shipping-right">
-
+            <section class="shipping-right w-[30%]">
+              <div class="shipping-body">
+                <div class="shipping-checkout flex justify-between items-center">
+                  <p class="text-textgray my-3">Subtotal:</p>
+                  <p class=" font-medium text-xl">$0.00</p>
+                </div>
+                <div class="shipping-checkout flex justify-between items-center">
+                  <p class="text-textgray my-3">Shipping:</p>
+                  <p class=" font-medium text-xl">-</p>
+                </div>
+                <div class="shipping-checkout flex justify-between items-center">
+                  <p class="text-textgray my-3">Discount:</p>
+                  <p class=" font-medium text-xl">-</p>
+                </div>
+                <div class="shipping-checkout flex justify-between items-center">
+                  <p class="text-textgray my-3">Tax:</p>
+                  <p class=" font-medium text-xl">$0.00</p>
+                </div>
+                <hr class="checkout-hr my-5">
+                <p class="text-right text-2xl font-medium total">$0.00</p>
+                <div class="checkout-voucher mt-3">
+                  <input type="text" class="checout-voucher__input" placeholder="Voucher">
+                  <button class="btn apply-voucher">Apply Voucher</button>
+                </div>
+              </div>
             </section>
           </div>
         </div>
       </section>
+      <section class="register-modal hidden fixed top-0 left-0 w-full h-full z-10 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="register-field p-12 pb-0 flex justify-center bg-white">
+          <div class="register-box">
+            <h2 class="register-box__header">Welcome To Ecommerce</h2>
+            <p class="register-box__title pb-10">
+              Log in with email & password
+            </p>
+            <form action="" class="register-form">
+              <label for="">Email or Phone Number</label>
+              <input
+                type="text"
+                class="email-input"
+                placeholder="example@mail.com"
+              />
+              <label for="">Password</label>
+              <div class="password-area mb-4">
+                <input
+                  type="password"
+                  class="password-input"
+                  min="8"
+                  placeholder="********"
+                />
+                <i class="fa-light fa-eye show-password"></i>
+              </div>
+              <button class="login-btn btn">Login</button>
+              <div class="horizontal-line text-center mt-4">
+                <div class="hr"></div>
+                <span>on</span>
+                <div class="hr"></div>
+              </div>
+              <button class="facebook-btn btn block mt-4 mb-3">
+                <i
+                  class="fa-brands fa-facebook mr-3 social-icon"
+                  style="color: #ffffff"
+                ></i
+                >Continue with Facebook
+              </button>
+              <button class="google-btn btn block">
+                <svg
+                  class="social-icon inline-block mr-3 google-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#FFC107"
+                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                  ></path>
+                  <path
+                    fill="#FF3D00"
+                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                  ></path>
+                  <path
+                    fill="#4CAF50"
+                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                  ></path>
+                  <path
+                    fill="#1976D2"
+                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                  ></path></svg
+                >Continue with Google
+              </button>
+            </form>
+            <p class="create-acc text-center mt-4 mb-4 text-textgray">
+              Don’t have account?
+              <a href="#" class="create-acc__link">Sign Up</a>
+            </p>
+            <div class="forgotten">
+              <p class="text-center py-4 text-textgray">Forgot your password? <a href="#" class="">Reset It</a</p>
+            </div>
+          </div>
+        </div>
+      </section> 
     </main>
     <footer class="footer py-16">
       <div class="container mx-auto">
         <div class="footer-content">
           <div class="footer-body flex justify-between gap-5">
             <div class="col-4">
-              <a href="#" class="logo hidden lg:inline-block"
+              <a href="./index.html" class="logo hidden lg:inline-block"
                 ><img src="./assets/img/logo.svg" alt="" class="logo-img"
               /></a>
               <p class="my-4">
@@ -1721,12 +1820,13 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/details.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/details.js"></script>
   </body>
 </html>

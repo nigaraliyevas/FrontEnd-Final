@@ -53,44 +53,30 @@ $(".open-hidden").click(function () {
   $(".glasses-categories__dropdown").toggle(500);
 });
 
-$(document).ready(function () {
-  $.ajax({
-    url: "../../index.html",
-    method: "GET",
-    dataType: "html",
-    success: function (datas) {
-      let products = $(datas).find(".cars-body__bottom").html();
-      $(".glasses-body__right").append(products);
-      $(".glasses-body__right").append(`
-      <div class="showing-items flex justify-between">
-                  <div class="showing-items__left">
-                    <p class="text-textgray showing-items__text">Showing 1-9 of 1.3k Products</p>
-                  </div>
-                  <div class="showing-items__right">
-                    <ul class="pagination flex gap-2">
-                      <li class="deactive">
-                        <i class="fa-solid fa-chevron-left"></i>  
-                      </li>
-                      <li class="">1</li>
-                      <li class="">2</li>
-                      <li class="">3</li>
-                      <li class="">4</li>
-                      <li class="">...</li>
-                      <li class="">5</li>
-                      <li class="">6</li>
-                      <li class="">7</li>
-                      <li class="">8</li>
-                      <li class="">9</li>
-                      <li class="">
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </li>
-                    </ul>
-                  </div>
-                </div>`);
-    },
-    error: function (error) {
-      console.error("Error loading content:", error);
-    },
+
+document.querySelectorAll(".pagination li").forEach((li) => {
+  li.addEventListener("click", function () {
+    const paginationItems = document.querySelectorAll(".pagination li");
+    if (this.innerText === "<") {
+      const selectedPage = document.querySelector(".pagination .selected-page");
+      const currentPageIndex =
+        Array.from(paginationItems).indexOf(selectedPage);
+      if (currentPageIndex > 1) {
+        paginationItems[currentPageIndex - 1].click();
+      }
+    } else if (this.innerText === ">") {
+      const selectedPage = document.querySelector(".pagination .selected-page");
+      const currentPageIndex =
+        Array.from(paginationItems).indexOf(selectedPage);
+      if (currentPageIndex < paginationItems.length - 2) {
+        paginationItems[currentPageIndex + 1].click();
+      }
+    } else {
+      paginationItems.forEach((li) => {
+        li.classList.remove("selected-page");
+      });
+      this.classList.add("selected-page");
+    }
   });
 });
 
