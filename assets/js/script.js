@@ -7,21 +7,6 @@ function openAndClose(element) {
     element.classList.add("hidden");
   }
 }
-const plus = document.querySelector(".plus");
-const minus = document.querySelector(".minus");
-const hiddenBar = document.querySelector(".hidden-bar");
-plus.addEventListener("click", () => {
-  if (hiddenBar.classList.contains("hidden")) {
-    hiddenBar.classList.remove("hidden");
-  }
-});
-minus.addEventListener("click", () => {
-  const count = document.querySelector(".product-body__count");
-  // if (!count) {
-  //   hiddenBar.classList.add("hidden");
-  // }
-  hiddenBar.classList.add("hidden");
-});
 // header autoplay slider
 $(document).ready(function () {
   $(".autoplay").slick({
@@ -143,3 +128,96 @@ filterBtns.forEach((btn) => {
     }
   });
 });
+
+let basketProducts = [];
+
+if (localStorage.getItem("basket") === null) {
+  localStorage.setItem("basket", JSON.stringify([]));
+} else {
+  basketProducts = JSON.parse(localStorage.getItem("basket"));
+}
+// shopBtns.forEach((btn) => {
+//   btn.addEventListener("click", function (ev) {
+//     const findProduct = this.closest(".product");
+//     const productId = findProduct
+//       .querySelector(".product-body")
+//       .getAttribute("id");
+
+//     const existProduct = basketProducts.find((p) => p.id == productId);
+//     if (existProduct) {
+//       existProduct.count++;
+
+//       const shopProducts = document.querySelectorAll(
+//         ".shop-products .shop-product"
+//       );
+
+//       shopProducts.forEach((product) => {
+//         if (product.getAttribute("id") === productId) {
+//           product.querySelector(".shop-product__counter input").value =
+//             existProduct.count;
+//         }
+//       });
+//     } else {
+//       const product = {
+//         id: productId,
+//         img: findProduct.querySelector(".product-img").getAttribute("src"),
+//         category: findProduct.querySelector(".product-category").innerHTML,
+//         name: findProduct.querySelector(".product-name").innerHTML,
+//         price: findProduct.querySelector(".product-price").innerHTML,
+//         count: 1,
+//       };
+//       basketProducts.push(product);
+//       appendProducts();
+//     }
+//     localStorage.setItem("basket", JSON.stringify(basketProducts));
+//     calcBasketCount();
+//   });
+// });
+
+const plusBtns = document.querySelectorAll(".plus");
+plusBtns.forEach((plus) => {
+  plus.addEventListener("click", function () {
+    if (this.previousElementSibling.classList.contains("hidden")) {
+      this.previousElementSibling.classList.remove("hidden");
+    }
+  });
+});
+const minusBtns = document.querySelectorAll(".minus");
+
+
+
+
+// const shopProducts = document.querySelector(".shop-products");
+// function appendProducts() {
+//   shopProducts.innerHTML = "";
+//   basketProducts.forEach((product) => {
+//     shopProducts.innerHTML += `<div class="shop-product" id="${product.id}">
+//     <div class="shop-product__img">
+//       <img src="${product.img}" alt="">
+//       </div>
+//       <div class="shop-product__content">
+//         <p class="shop-product__category">${product.category}</p>
+//         <p class="shop-product__name">${product.name}</p>
+//       </div>
+//       <div class="shop-product__total">
+//         <p class="product-product__price">${product.price} AZN</p>
+//       </div>
+//       <div class="shop-product__counter">
+//         <button class="counter-minus">-</button>
+//         <input type="number" value="${product.count}" min="1" max="10" class="shop-product__count" />
+//         <button class="counter-plus">+</button>
+//       </div>
+//       <div class="shop-product__settings">
+//         <button class="shop-product__remove">
+//           <i class="fa-solid fa-trash"></i>
+//         </button>
+//       </div>
+//   </div>
+//     `;
+//   });
+//   removeProducts();
+//   increaseCount();
+//   decreaseCount();
+// }
+
+// appendProducts();
