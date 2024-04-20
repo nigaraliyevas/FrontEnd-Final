@@ -70,3 +70,18 @@ downIcons.forEach((icon) => {
     openAndClose(dropMenu);
   });
 });
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener("keyup", function () {
+  const searchText = this.value.toLowerCase();
+  const items = document.querySelectorAll(".product");
+  items.forEach((item) => {
+    const itemText = item.innerHTML.toLowerCase();
+    if (itemText.indexOf(searchText) === -1) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+      item.style.width = "50%";
+    }
+    item.style.width = "31%";
+  });
+});

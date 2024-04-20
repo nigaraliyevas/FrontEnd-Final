@@ -133,7 +133,7 @@ filterBtns.forEach((btn) => {
 $(".shopping-icon").click(function () {
   $(".basket-modal").toggle();
 });
-
+// LocalStorage
 let basketProducts = [];
 
 if (localStorage.getItem("basket") === null) {
@@ -200,36 +200,10 @@ minusBtns.forEach((minus) => {
         }
       }
     }
-
     localStorage.setItem("basket", JSON.stringify(basketProducts));
     calcBasketCount();
   });
 });
-
-function decreaseCount() {
-  const minusBtn = document.querySelectorAll(".counter-minus");
-  minusBtn.forEach((minus, index) => {
-    minus.addEventListener("click", function () {
-      if (basketProducts[index] && basketProducts[index].count > 0) {
-        basketProducts[index].count--;
-        const productElement = document.getElementById(
-          `#${basketProducts[index]}`
-        );
-      }
-      if (basketProducts[index].count === 0) {
-        basketProducts[index].id.classList.add("d-none");
-        basketProducts = basketProducts.filter(
-          (pr) => pr.id !== basketProducts[index].id
-        );
-        updateAllData();
-        appendProducts();
-      }
-      calcBasketCount();
-      updateAllData();
-      appendProducts();
-    });
-  });
-}
 
 function calcBasketCount() {
   const countBasket = document.querySelector(".count");
